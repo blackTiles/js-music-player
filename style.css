@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    
+    background-color: aliceblue;
+}
+.container{
+    width:100%;
+    height: 100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.card{
+    background: rgb(252, 251, 251);
+    width: 300px;
+    height: 500px;
+    box-shadow: 0px 0px 20px 1px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction:column;
+    justify-content:space-around;
+    align-items:center;
+}
+.card .image{
+    column-count: 1;
+}
+.card .image img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow:0px 0px 10px 0px;
+}
+.rotateImage{
+    animation: ghumo 1s linear infinite;
+}
+@keyframes ghumo{
+    from{
+        transform: rotateZ(0deg);
+    }
+    to{
+        transform: rotateZ(360deg);
+    }
+}
+.card .duration{
+    display: flex;
+    justify-content:space-evenly;
+    width: 100%;
+}
+
+.card .music{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+.card .music i{
+    font-size: 40px;
+    cursor: pointer;
+    text-shadow: 0px 0px 5px rgb(15, 15, 15);
+}
+.card .music i:active{
+    color:rgb(190, 45, 9);
+}
+
+
+input[type=range]{
+    -webkit-appearance: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 300px;
+    height: 5px;
+    background: #ddd;
+    border: none;
+    border-radius: 3px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: goldenrod;
+    margin-top: -4px;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #ccc;
+}
